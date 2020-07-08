@@ -31,29 +31,29 @@ live_loop :bass do
 end
 
 live_loop :glitch do
-  sample :bass_dnb_f, release: 0.25, amp: 2, sustain: 0
+  sample :bass_dnb_f, release: 0.25, amp: 2
   sleep 0.75
-  sample :elec_bong, release: 0.25, sustain: 0
+  sample :elec_bong, release: 0.25
   sleep 0.75
-  sample :glitch_perc5, release: 0.25, amp: 2, sustain: 0
+  sample :glitch_perc5, release: 0.25, amp: 2
   sleep 0.5
-  sample :elec_bong, release: 0.25, sustain: 0
+  sample :elec_bong, release: 0.25
   sleep 1.5
-  sample :ambi_piano, release: 0.25, amp: 2, sustain: 0
+  sample :ambi_piano, release: 0.25, amp: 2
   sleep 0.25
-  sample :glitch_perc2, release: 0.25, amp: 1.5, sustain: 0
+  sample :glitch_perc2, release: 0.25, amp: 1.5
   sleep 0.25
-  sample :bd_mehackit, release: 0.25, amp: 0.7, sustain: 0
+  sample :bd_mehackit, release: 0.25, amp: 0.7
   sleep 0.75
-  sample :elec_fuzz_tom, release: 0.25, amp: 0.5, sustain: 0
+  sample :elec_fuzz_tom, release: 0.25, amp: 0.5
   sleep 0.75
-  sample :ambi_sauna, release: 0.25, amp: 0.2, sustain: 0
+  sample :ambi_sauna, release: 0.25, amp: 0.2
   sleep 0.5
-  sample :bd_mehackit, release: 0.25, amp: 0.7, sustain: 0
+  sample :bd_mehackit, release: 0.25, amp: 0.7
   sleep 1.5
-  sample :bass_drop_c, release: 0.25, amp: 2, sustain: 0
+  sample :bass_drop_c, release: 0.25, amp: 2
   sleep 0.25
-  sample :elec_fuzz_tom, release: 0.25, amp: 0.5, sustain: 0
+  sample :elec_fuzz_tom, release: 0.25, amp: 0.5
   sleep 0.25
 end
 
@@ -63,13 +63,13 @@ live_loop :drums do
   sleep 0.75
   sample :bd_boom
   sleep 0.25
-  sample :sn_dub, rate: 1.2, sustain: 0, release: 0.25
+  sample :sn_dub, rate: 1.2, release: 0.25
   sleep 0.5
   sample :bd_boom
   sleep 1
   sample :bd_boom
   sleep 0.5
-  sample :sn_dub, rate: 1.2, sustain: 0, release: 0.25
+  sample :sn_dub, rate: 1.2, release: 0.25
   sleep 0.25
   sample :bd_boom
   sleep 0.75

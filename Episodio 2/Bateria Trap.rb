@@ -19,45 +19,45 @@ end
 
 live_loop :hats do
   8.times do
-    sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+    sample :drum_cymbal_closed, rate: 2, release: 0.0625
     sleep 0.125
   end
-  sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+  sample :drum_cymbal_closed, rate: 2, release: 0.0625
   sleep 0.25
   6.times do
-    sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+    sample :drum_cymbal_closed, rate: 2, release: 0.0625
     sleep 0.125
   end
-  sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+  sample :drum_cymbal_closed, rate: 2, release: 0.0625
   sleep 0.25
   4.times do
-    sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+    sample :drum_cymbal_closed, rate: 2, release: 0.0625
     sleep 0.0625
   end
   8.times do
-    sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+    sample :drum_cymbal_closed, rate: 2, release: 0.0625
     sleep 0.125
   end
   
   
   12.times do
-    sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+    sample :drum_cymbal_closed, rate: 2, release: 0.0625
     sleep 0.0625
   end
-  sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+  sample :drum_cymbal_closed, rate: 2, release: 0.0625
   sleep 0.25
   6.times do
-    sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+    sample :drum_cymbal_closed, rate: 2, release: 0.0625
     sleep 0.125
   end
-  sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+  sample :drum_cymbal_closed, rate: 2, release: 0.0625
   sleep 0.25
   4.times do
-    sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+    sample :drum_cymbal_closed, rate: 2, release: 0.0625
     sleep 0.0625
   end
   8.times do
-    sample :drum_cymbal_closed, rate: 2, sustain: 0, release: 0.0625
+    sample :drum_cymbal_closed, rate: 2, release: 0.0625
     sleep 0.125
   end
 end

@@ -4,23 +4,23 @@ live_loop :drums do
   3.times do
     sample :bd_haus, rate: 1.3
     sleep 0.75
-    sample :drum_snare_hard, rate: 1.6, sustain: 0, release: 0.25
+    sample :drum_snare_hard, rate: 1.6, release: 0.25
     sleep 0.25
     sample :bd_haus, rate: 1.3
     sleep 0.5
-    sample :drum_snare_hard, rate: 1.6, sustain: 0, release: 0.25
+    sample :drum_snare_hard, rate: 1.6, release: 0.25
     sleep 0.5
   end
   sample :bd_haus, rate: 1.3
-  sample :drum_snare_hard, rate: 1.6, sustain: 0, release: 0.25, amp: 0.8
+  sample :drum_snare_hard, rate: 1.6, release: 0.25, amp: 0.8
   sleep 0.25
-  sample :drum_snare_hard, rate: 1.6, sustain: 0, release: 0.25, amp: 0.9
+  sample :drum_snare_hard, rate: 1.6, release: 0.25, amp: 0.9
   sleep 0.5
-  sample :drum_snare_hard, rate: 1.6, sustain: 0, release: 0.25, amp: 0.7
+  sample :drum_snare_hard, rate: 1.6, release: 0.25, amp: 0.7
   sleep 0.25
   sample :bd_haus, rate: 1.3
   sleep 0.5
-  sample :drum_snare_hard, rate: 1.6, sustain: 0, release: 0.25
+  sample :drum_snare_hard, rate: 1.6, release: 0.25
   sleep 0.5
 end
 
