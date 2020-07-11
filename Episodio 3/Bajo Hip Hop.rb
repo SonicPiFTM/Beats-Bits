@@ -1,6 +1,7 @@
+#Bajo Hip Hop
 use_bpm 90
 
-live_loop :bass do
+live_loop :bajo do
   duraciones = (ring 1.75, 0.25, 1.5, 1, 1.25, 0.25, 2)
   notas1 = (ring :a2, :g3, :a3, :a2, :a2, :g3, :a3)
   notas2 = (ring :d3, :c4, :d4, :d3, :d3, :c4, :d4)
@@ -8,19 +9,19 @@ live_loop :bass do
   2.times do
     7.times do
       play notas1.tick, release: 0.5
-      sleep duraciones[look]
+      sleep duraciones.look
     end
   end
   2.times do
     7.times do
       play notas2.tick, release: 0.5
-      sleep duraciones[look]
+      sleep duraciones.look
     end
   end
 end
 
 
-live_loop :drums do
+live_loop :bata do
   sample :drum_splash_hard
   2.times do
     sample :bd_tek

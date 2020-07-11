@@ -1,3 +1,4 @@
+#Every breath you take
 use_bpm 117
 
 live_loop :guitarra do
@@ -12,54 +13,29 @@ live_loop :guitarra do
       sleep 0.5
     end
   end
+  tick_reset #Me aseguro que comienza de la primera posición nuevamente.
   2.times do
     8.times do
       play notas2.tick
       sleep 0.5
     end
   end
-  8.times do
-    play notas3.tick
-    sleep 0.5
-  end
-  8.times do
-    play notas4.tick
-    sleep 0.5
-  end
-  2.times do
-    8.times do
-      play notas1.tick
-      sleep 0.5
-    end
-  end
+  #COMPLETAR ACÁ LO QUE FALTA USANDO LOS ANILLOS QUE LES REGALAMOS
 end
 
-live_loop :bass do
+live_loop :bajo do
   use_synth :fm
   notas=(ring :Ab2, :F2, :Db3, :Eb3, :Ab2)
   2.times do
     tick
     2.times do
       8.times do
-        play notas[look]
+        play notas.look
         sleep 0.5
       end
     end
   end
-  2.times do
-    tick
-    8.times do
-      play notas[look]
-      sleep 0.5
-    end
-  end
-  tick
-  2.times do
-    8.times do
-      play notas[look]
-      sleep 0.5
-    end
-  end
+  #COMPLETAR ACÁ LO QUE FALTA USANDO EL ANILLO DEL BAJO
 end
 
 live_loop :drums do

@@ -1,16 +1,17 @@
+#House
 use_bpm 130
 
-live_loop :bass do
+live_loop :bajo do
   on = (ring 1, 0, 1, 1, 0, 0, 1)
   use_synth :fm
-  play scale(:a2, :minor_pentatonic).tick, amp: on[look]
+  play scale(:a2, :minor_pentatonic).tick, amp: on.look
   sleep 0.75
 end
 
-live_loop :melodicbass do
+live_loop :bajoMelodico do
   on = (ring 0, 1, 1, 0, 0, 1)
   use_synth :chipbass
-  play chord(:a3, :m9).tick, amp: on[look]
+  play chord(:a3, :m9).tick, amp: on.look
   sleep 0.25
 end
 
@@ -38,8 +39,8 @@ live_loop :perc do
   sleep 0.25
   sleep 3
   sleep 2.5
-  sample :ambi_choir, rate: 1.2, sustain: 0, release: 1, amp: 0.4
+  sample :ambi_choir, rate: 1.2,release: 1, amp: 0.4
   sleep 1
-  sample :ambi_piano, rate: 1.6, sustain: 0, release: 1
+  sample :ambi_piano, rate: 1.6, release: 1
   sleep 0.5
 end
