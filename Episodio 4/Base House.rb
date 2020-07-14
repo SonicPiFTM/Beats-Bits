@@ -1,5 +1,15 @@
 #House
 use_bpm 130
+use_random_seed 3 #Diferentes numeros de random seed van a dar diferentes aleatoriedades
+
+live_loop :melodia do
+  use_synth :supersaw
+  11.times do
+    play scale(:a4, :minor_pentatonic, num_octaves: 2)[rrand_i(0, 8)]
+    sleep 0.75 # Esta ritmica es muy deadmau5!
+  end
+  sleep 3.75
+end
 
 live_loop :bajo do
   on = (ring 1, 0, 1, 1, 0, 0, 1) # Se recomienda cambiar estos valores en vivo
