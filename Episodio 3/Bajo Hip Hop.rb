@@ -5,9 +5,9 @@ live_loop :bajo do
   duraciones = (ring 1.75, 0.25, 1.5, 1, 1.25, 0.25, 2)
   notas1 = (ring :a2, :g3, :a3, :a2, :a2, :g3, :a3)
   notas2 = (ring :d3, :c4, :d4, :d3, :d3, :c4, :d4)
-  use_synth :fm
+  use_synth :fm #Este sonido es de lo que más se parece a un bajo eléctrico
   2.times do
-    7.times do
+    7.times do # Cada ring tiene 7 notas y queremos que suenen dos veces cada uno
       play notas1.tick, release: 0.5
       sleep duraciones.look
     end
