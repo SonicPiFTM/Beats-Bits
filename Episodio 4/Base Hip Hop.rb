@@ -43,7 +43,7 @@ live_loop :bajo do
   duraciones = (ring 1.75, 0.25, 1.5, 1, 1.25, 0.25, 2)
   notas1 = (ring :a2, :g3, :a3, :a2, :a2, :g3, :a3)
   notas2 = (ring :d3, :c4, :d4, :d3, :d3, :c4, :d4)
-  use_synth :fm #Este sonido es de lo que m√°s se parece a un bajo el√©ctrico
+  use_synth :fm #Este sonido es de lo que m·s se parece a un bajo elÈctrico
   2.times do
     7.times do # Cada ring tiene 7 notas y queremos que suenen dos veces cada uno
       play notas1.tick, release: 0.5
@@ -91,7 +91,7 @@ live_loop :bata do
 end
 
 live_loop :hats do
-  # Mucho interes en la aliatoriedad ac√°!
+  # Mucho interes en la aliatoriedad ac·!
   if one_in(4)
     4.times do
       sample :drum_cymbal_closed, amp: rrand(0.3, 0.9)

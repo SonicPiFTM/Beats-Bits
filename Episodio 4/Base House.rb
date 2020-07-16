@@ -18,8 +18,8 @@ live_loop :bajo do
   sleep 0.75
 end
 
-# No llega a ser una melodia, es como una capa m√°s de baj
-# o a la que todavia se le puede agregar algo m√°s
+# No llega a ser una melodia, es como una capa m·s de bajo
+# a la que todavia se le puede agregar algo m·s
 live_loop :bajoMelodico do
   on = (ring 0, 1, 1, 0, 0, 1) # Se recomienda cambiar estos valores en vivo
   use_synth :chipbass #El sonido es parecido a :fm pero lo suficientemente diferente para aportar otra capa
