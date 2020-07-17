@@ -1,20 +1,24 @@
 #House
 use_bpm 130
 
+#Fijense como puedo tener dos variables con el mismo nombre y distinto contenido si están en distintos loops. Cada loop tiene su mundo de variables.
+
 live_loop :bajo do
   on = (ring 1, 0, 1, 1, 0, 0, 1) # Se recomienda cambiar estos valores en vivo
+  notas=(ring :A2,:C3, :D3, :E3, :G3, :A3)
   use_synth :fm
-  play scale(:a2, :minor_pentatonic).tick, amp: on.look
+  play notas.tick, amp: on.look
   sleep 0.75
 end
 
-# No llega a ser una melodia, es como una capa más de baj
-# o a la que todavia se le puede agregar algo más
+# No llega a ser una melodia, es como una capa más de bajo
+# a la que todavía se le puede agregar algo más
 live_loop :bajoMelodico do
   on = (ring 0, 1, 1, 0, 0, 1) # Se recomienda cambiar estos valores en vivo
+  notas=(ring :A2,:C3, :E3, :G3, :B3)
   use_synth :chipbass #El sonido es parecido a :fm pero lo suficientemente diferente para aportar otra capa
   #Usamos notas del acorde de La menor con novena, tiene algo jazzero!
-  play chord(:a2, :m9).tick, amp: on.look
+  play notas.tick, amp: on.look
   #Se puede eventualmente cambiar el acorde por :d3 y volver para introducir un cambio
   sleep 0.25
 end
