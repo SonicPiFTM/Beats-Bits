@@ -3,7 +3,7 @@ use_bpm 130
 
 live_loop :melodia do
   use_synth :supersaw
-  escala = scale(:a4, :minor_pentatonic, num_octaves: 2)
+  escala = (scale :a4, :minor_pentatonic, num_octaves: 2)
   escalaReflejada = escala.reflect
   11.times do # La escala tiene 5 notas y cada vez se tocan 11, siempre empieza en lugares diferentes!
     play escalaReflejada.tick
@@ -16,17 +16,21 @@ live_loop :bajo do
   on = (ring 1, 0, 1, 1, 0, 0, 1) # Se recomienda cambiar estos valores en vivo
   escala = scale(:a2, :minor_pentatonic)
   use_synth :fm
-  play escala.tick, amp: on.look
+  if on.tick==1 then
+    play escala.look, amp: 1
+  end
   sleep 0.75
 end
 
-# No llega a ser una melodia, es como una capa mï¿½s de bajo
-# a la que todavia se le puede agregar algo mï¿½s
+# No llega a ser una melodia, es como una capa más de bajo
+# a la que todavia se le puede agregar algo más
 live_loop :bajoMelodico do
   on = (ring 0, 1, 1, 0, 0, 1) # Se recomienda cambiar estos valores en vivo
   acorde = chord(:a2, :m9) #Usamos notas del acorde de La menor con novena, tiene algo jazzero!
   use_synth :chipbass #El sonido es parecido a :fm pero lo suficientemente diferente para aportar otra capa
-  play acorde.tick, amp: on.look
+  if on.tick==1 then
+    play acorde.look
+  end
   #Se puede eventualmente cambiar el acorde por :d3 y volver para introducir un cambio
   sleep 0.25
 end
