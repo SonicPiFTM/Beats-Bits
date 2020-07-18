@@ -1,23 +1,27 @@
 #Reggaeton
 use_bpm 90
 
+
 live_loop :melodiaLider do
   duraciones = (ring 3, 1, 4)
   notas = (ring :b4, :a4, :e4, :g4, :f4, :e4)
-  
   use_synth :prophet
-  
-  play notas.tick, release: duraciones.look
-  sleep duraciones.look
+  if one_in 2
+    3.times do
+      play notas.tick, release: duraciones.look
+      sleep duraciones.look
+    end
+  else
+    sleep 4
+  end
 end
 
 live_loop :rellenoMelodico do
-  duraciones = (ring 0.5, 0.5, 0.25, 0.25, 0.5)
-  acorde = chord(:e, :minor)
+  duraciones = (ring 0.25, 0.25, 0.5, 0.25, 0.25, 0.5)
   use_synth :blade
   6.times do
     tick
-    play acorde.tick, release: duraciones.look
+    play chord(:e, :minor)[rrand_i(0, 8)], release: duraciones.look
     sleep duraciones.look
   end
   sleep 2
@@ -25,10 +29,9 @@ end
 
 live_loop :arpegio do
   duraciones = (ring 0.25, 0.25, 0.5, 0.25, 0.25, 0.5)
-  acorde = chord(:e, :minor, num_octaves: 1)
   use_synth :piano
   6.times do
-    play acorde.tick, release: duraciones.look
+    play chord(:e, :minor, num_octaves: 1).tick, release: duraciones.look
     sleep duraciones.look
   end
   sleep 2
