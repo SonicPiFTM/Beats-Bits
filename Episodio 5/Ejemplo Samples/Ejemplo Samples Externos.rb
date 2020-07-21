@@ -1,22 +1,17 @@
-# Los archivos estÃ¡n en una carpeta en el repositorio, como yo los tengo que editar localmente
-# no tiene utilidad que ponga el path ya que no andarÃ­a, por lo que, en este ejemplo, los
-# samples los copiÃ© a la carpeta de Samples de la instalaciÃ³n de Sonic Pi
-
+#Copiar los archivos en C:\Samples. Si los ponés en otro lugar, acordate de modificar la variable carpeta
 
 #Vamos a aprovechar los samples externos para hacer un género de música electronica llamado "Glitch Hop"
 #Está basado en cortar partes muy pequeñas de samples
 
-bpm = 130
+use_bpm 130
 
-use_bpm bpm
-
-sample1 = :sample1
-sample2 = :sample2
-sample3 = :sample3
-sample4 = :sample4
-sample5 = :sample5
-sample6 = :sample6
-
+carpeta="C:/Samples"
+sample1 = carpeta, "sample1.wav"
+sample2 = carpeta, "sample2.wav"
+sample3 = carpeta, "sample3.wav"
+sample4 = carpeta, "sample4.wav"
+sample5 = carpeta, "sample5.wav"
+sample6 = carpeta, "sample6.wav"
 
 with_fx :reverb do
   with_fx :distortion do

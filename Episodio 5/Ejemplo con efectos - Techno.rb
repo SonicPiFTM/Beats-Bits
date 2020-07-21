@@ -36,7 +36,7 @@ end
 
 with_fx :echo, phase: 0.5, decay: 3, amp: 0.6 do
   with_fx :octaver do #Agrega lo mismo una octava por debajo
-    with_fx :distortion, distort: 0.9 do #Dato curioso, el sonido de un octavador mÃ¡s un una distorsiÃ³n marcÃ³ la decada de los 60
+    with_fx :distortion, distort: 0.9 do #Dato curioso, el sonido de un octavador más una distorsión marcó la década de los 60
       live_loop :melodia do
         use_synth :dsaw
         notas = (ring :a5, :c6, :g5)
