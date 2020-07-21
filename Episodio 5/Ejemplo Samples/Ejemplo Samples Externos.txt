@@ -1,0 +1,12 @@
+# Los archivos están en una carpeta en el repositorio, como yo los tengo que editar localmente
+# no tiene utilidad que ponga el path ya que no andaría, por lo que, en este ejemplo, los
+# samples los copié a la carpeta de Samples de la instalación de Sonic Pi
+
+bpm = 130
+
+use_bpm bpm
+
+live_loop :sampleChop do
+  sample :2
+  sleep 1
+end
