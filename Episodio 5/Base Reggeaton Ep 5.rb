@@ -6,7 +6,7 @@ live_loop :melodiaLider do
   duraciones = (ring 3, 1, 4)
   notas = (ring :b4, :a4, :e4, :g4, :f4, :e4)
   use_synth :prophet
-  if one_in 2
+  if rrand(1,2)==1 then
     3.times do
       play notas.tick, release: duraciones.look
       sleep duraciones.look
@@ -21,7 +21,7 @@ live_loop :rellenoMelodico do
   use_synth :blade
   6.times do
     tick
-    play chord(:e, :minor)[rrand_i(0, 8)], release: duraciones.look
+    play chord(:e, :minor).choose, release: duraciones.look
     sleep duraciones.look
   end
   sleep 2

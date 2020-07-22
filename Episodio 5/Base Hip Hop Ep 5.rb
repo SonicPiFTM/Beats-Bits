@@ -1,4 +1,4 @@
-#Bajo Hip Hop
+#Hip Hop
 use_bpm 90
 
 live_loop :melodia do
@@ -28,12 +28,12 @@ live_loop :arpegio do
   use_synth :pluck
   64.times do
     tick
-    play chord(:a3, :m9).look, amp: rrand(0.6, 1) if on.look > 0
+    play chord(:a3, :m9).look, amp: rrand(0.6, 1) if on.look ==1
     sleep 0.25
   end
   64.times do
     tick
-    play chord(:d3, :m9).look, amp: rrand(0.6, 1)  if on.look > 0
+    play chord(:d3, :m9).look, amp: rrand(0.6, 1)  if on.look ==1
     sleep 0.25
   end
 end
@@ -92,7 +92,7 @@ end
 
 live_loop :hats do
   # Mucho interes en la aliatoriedad acá!
-  if one_in(4)
+  if rrand_i(1,4)== 1 then
     4.times do
       sample :drum_cymbal_closed, amp: rrand(0.3, 0.9)
       sleep 0.25
@@ -100,7 +100,9 @@ live_loop :hats do
   else
     sample :drum_cymbal_closed, amp: 0.8
     sleep 0.5
-    sample :drum_cymbal_closed, amp: 0.5 if !one_in(3)
+    if rrand_i(1,3)==1 then
+      sample :drum_cymbal_closed, amp: 0.5
+    end
     sleep 0.5
   end
 end

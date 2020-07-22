@@ -5,7 +5,7 @@ use_random_seed 3 #Diferentes numeros de random seed van a dar diferentes aleato
 live_loop :melodia do
   use_synth :supersaw
   11.times do
-    play scale(:a4, :minor_pentatonic, num_octaves: 2)[rrand_i(0, 8)]
+    play scale(:a4, :minor_pentatonic, num_octaves: 2).choose
     sleep 0.75 # Esta ritmica es muy deadmau5!
   end
   sleep 3.75
