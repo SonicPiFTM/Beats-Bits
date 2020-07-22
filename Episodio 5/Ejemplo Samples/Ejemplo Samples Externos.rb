@@ -5,13 +5,13 @@
 
 use_bpm 130
 
-carpeta="C:/Samples"
-sample1 = carpeta, "sample1.wav"
-sample2 = carpeta, "sample2.wav"
-sample3 = carpeta, "sample3.wav"
-sample4 = carpeta, "sample4.wav"
-sample5 = carpeta, "sample5.wav"
-sample6 = carpeta, "sample6.wav"
+carpeta="C:/Samples/"
+sample1 = carpeta+"sample1.wav"
+sample2 = carpeta+"sample2.wav"
+sample3 = carpeta+"sample3.wav"
+sample4 = carpeta+"sample4.wav"
+sample5 = carpeta+"sample5.wav"
+sample6 = carpeta+"sample6.wav"
 
 with_fx :reverb do
   with_fx :distortion do
