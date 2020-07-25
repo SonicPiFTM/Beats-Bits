@@ -1,7 +1,7 @@
 # En esto lo arreglamos haciendo que el loop de bajo mantenga la cuenta de cuando comienza
 # de nuevo la base con un cue, y el resto espera con un sync antes de empezar el loop
-# TambiÃ©n debemos hacer que todos los loops que se vayan a sincronizar duren lo mismo
-# si no habrÃ¡ momentos silencio mientras esperan
+# También debemos hacer que todos los loops que se vayan a sincronizar duren lo mismo
+# si no habría momentos de silencio mientras esperan
 
 use_bpm 150
 
@@ -60,24 +60,29 @@ with_fx :compressor, amp: 2 do
   end
 end
 
-
-live_loop :guitarra do
-  sync :comienzo
-  use_synth :fm
-  ritmo = (ring 0.5, 0.5, 3)
-  acorde1 = chord(:a4, :minor)
-  acorde2 = chord(:f4, :major)
-  acorde3 = chord(:d4, :minor)
-  3.times do
-    play acorde1.tick, release: ritmo.look
-    sleep ritmo.look
-  end
-  3.times do
-    play acorde2.tick, release: ritmo.look
-    sleep ritmo.look
-  end
-  6.times do
-    play acorde3.tick, release: ritmo.look
-    sleep ritmo.look
+with_fx :reverb do
+  with_fx :echo, phase: 1.5, decay: 5 do
+    with_fx :krush, amp: 1 do
+      live_loop :guitarra do
+        sync :comienzo
+        use_synth :fm
+        ritmo = (ring 0.5, 0.5, 3)
+        acorde1 = chord(:a4, :minor)
+        acorde2 = chord(:f4, :major)
+        acorde3 = chord(:d4, :minor)
+        3.times do
+          play acorde1.tick, release: ritmo.look
+          sleep ritmo.look
+        end
+        3.times do
+          play acorde2.tick, release: ritmo.look
+          sleep ritmo.look
+        end
+        6.times do
+          play acorde3.tick, release: ritmo.look
+          sleep ritmo.look
+        end
+      end
+    end
   end
 end
