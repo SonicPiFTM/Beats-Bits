@@ -1,7 +1,7 @@
 #Trap
 use_bpm 60
 
-# Es recomendable juagr con los rangos de los rrand, cambiar los samples dentro de :glitch y
+# Es recomendable jugar con los rangos de los rrand, cambiar los samples dentro de :glitch y
 # las frecuencias de los one_in
 
 live_loop :arpegio do
@@ -19,7 +19,7 @@ end
 
 live_loop :arpegio2 do
   duraciones = (ring 0.5, 0.5, 7)
-  use_synth :piano #lo mismo que el de arriba con otro sonido para mÃ¡s relleno
+  use_synth :piano #lo mismo que el de arriba con otro sonido para más relleno
   3.times do
     play chord(:c, :m).tick, sustain: duraciones.look
     sleep duraciones.look
@@ -59,9 +59,9 @@ end
 
 
 live_loop :bajo do
-  # aca el truco estï¿½ en que en el trap los bajos se hacen con bombos muy largos que tienen una nota definida
-  # por eso lo que hacemos usar un sample de ese estilo y cambiar el rate con un ring, cambiando la afinaciï¿½n
-  # Ojo! Hay que afinarlos con paciencia y oï¿½ï¿½do
+  # aca el truco está en que en el trap los bajos se hacen con bombos muy largos que tienen una nota definida
+  # por eso lo que hacemos usar un sample de ese estilo y cambiar el rate con un ring, cambiando la afinación
+  # Ojo! Hay que afinarlos con paciencia y oído
   
   duraciones = (ring 1.75, 0.25, 0.75, 0.75, 0.5)
   notas = (ring 1, 1.3)
@@ -69,8 +69,8 @@ live_loop :bajo do
     5.times do
       tick #puedo ejecutar el tick solo para que se mueva a la siguiente posicion
       sample :bd_boom, rate: notas[0], amp: 3
-      #Tambiï¿½n puedo pedir una posiciï¿½n en particular del anillo poniendo entre corchetes la posiciï¿½n que quiero
-      #en este caso, notas[0] siempre serï¿½ 1 (salvo que cambie el contenido del anillo)
+      #También puedo pedir una posición en particular del anillo poniendo entre corchetes la posición que quiero
+      #en este caso, notas[0] siempre será 1 (salvo que cambie el contenido del anillo)
       sleep duraciones.look
     end
   end
