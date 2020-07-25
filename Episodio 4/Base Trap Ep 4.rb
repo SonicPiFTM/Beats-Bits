@@ -1,8 +1,7 @@
 #Trap
 use_bpm 60
 
-# Es recomendable jugar con los rangos de los rrand, cambiar los samples dentro de :glitch y
-# las frecuencias de los one_in
+# Es recomendable jugar con los rangos de los rrand y cambiar los samples dentro de :glitch 
 
 live_loop :arpegio do
   duraciones = (ring 0.5, 0.5, 7)
