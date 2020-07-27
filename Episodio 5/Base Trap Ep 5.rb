@@ -87,11 +87,17 @@ live_loop :bata do
   sleep 1
   sample :sn_dub
   sleep 2
-  sample :sn_dub, rate: one_in(3) ? -1.5 : 1
+  sample :sn_dub, rate: one_in(3) ? -1.5 : 1 # One_in quiere decir uno de cada, en este caso 1 de 
+# cada 3 veces aleatoriamente va a dar un valor positivo. Si el valor es positivo va a dar -1.5,
+# si es negativo da 1. A la estructura de " (condición) ? (caso positivo) : (caso negativo)" se la
+# conoce como operador ternario.
   sleep 1
 end
 
 live_loop :hats do
+# One_in quiere decir uno de cada, en este caso 1 de 
+# cada 4 veces aleatoriamente va a dar un valor positivo para el bloque de if.
+
   if one_in(4)
     4.times do
       sample :drum_cymbal_closed, rate: 2, release: 0.0625, amp: rrand(0.6, 1)
@@ -104,6 +110,7 @@ live_loop :hats do
       end
     end
   end
-  sample :drum_cymbal_closed, rate: 2, release: 0.0625, amp: rrand(0.6, 1) if !one_in(4)
+  sample :drum_cymbal_closed, rate: 2, release: 0.0625, amp: rrand(0.6, 1) if !one_in(4) # En este caso negamos el valor del one_in, cuando
+# es positivo da negativo y viceversa.
   sleep 0.25
 end

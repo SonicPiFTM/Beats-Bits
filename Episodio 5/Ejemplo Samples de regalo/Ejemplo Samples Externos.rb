@@ -47,6 +47,8 @@ live_loop :drums do
 end
 
 live_loop :hats do
-  sample :drum_cymbal_closed, amp: 0.5 if !one_in(3)
+  sample :drum_cymbal_closed, amp: 0.5 if !one_in(3) # One_in quiere decir uno de cada, en este caso 1 de 
+# cada 3 veces aleatoriamente va a dar un valor positivo. Con el "!" negamos ese valor, 
+# cada vez que es positivo da negativo y viceversa.
   sleep 0.25
 end
